@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p>
+            hello world
+        </p>
+        <script>
+            const ws = new WebSocket('ws://localhost:8000');
+            ws.onmessage = (event) => {            
+            console.log(event.data);            
+            };
+
+
+
+            // Function to send a message
+    function sendMessage() {
+      
+        ws.send("moi");
+        
+      }
+    
+
+    // Send message on Enter key
+    addEventListener('keypress', (e) => {
+        console.log("keypress event"); 
+      if (e.key === 'Enter') {
+        sendMessage();
+      }
+    });
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,12 @@
+npm init
+
+
+"dev": "node --watch index.js",
+
+
+
+import { Socket } from 'node:dgram';
+import http, { globalAgent } from 'node:http';
+import * as fs from 'node:fs';
+import crypto from 'crypto';
+
